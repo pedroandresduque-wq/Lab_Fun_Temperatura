@@ -71,6 +71,16 @@ public class FrmCambiosTemperaturas extends JFrame {
         });
         tb.add(btnCalcularEstadisticas);
 
+        JButton btnCalcularTempCiudad = new JButton();
+        btnCalcularTempCiudad.setIcon(new ImageIcon(getClass().getResource("/iconos/mientrastanto.png")));
+        btnCalcularTempCiudad.setToolTipText("Temperatura maxima y mínima de la ciudad seleccionada");
+        btnCalcularTempCiudad.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                btnCalcularTempCiudadClick();
+            }
+        });
+        tb.add(btnCalcularTempCiudad);
+
         // Contenedor con BoxLayout (vertical)
         JPanel pnlCambios = new JPanel();
         pnlCambios.setLayout(new BoxLayout(pnlCambios, BoxLayout.Y_AXIS));
@@ -104,6 +114,8 @@ public class FrmCambiosTemperaturas extends JFrame {
         tpCambiosTemperatura = new JTabbedPane();
         tpCambiosTemperatura.addTab("Gráfica", spGrafica);
         tpCambiosTemperatura.addTab("Estadísticas", pnlEstadisticas);
+        // Pestaña para mostrar temperatura (máximo/mínimo)
+        tpCambiosTemperatura.addTab("Temperatura", new JPanel());
 
         // Agregar componentes
         pnlCambios.add(pnlDatosProceso);
@@ -137,24 +149,18 @@ public class FrmCambiosTemperaturas extends JFrame {
                 return;
             }
 
-           var diccionariosGrafica = CambioTemperaturaServicio
-                   .extraer(CambioTemperaturaServicio.filtrar(ciudad, desde, hasta, cambiosTemperaturas));
+            var diccionariosGrafica = CambioTemperaturaServicio
+                    .extraer(CambioTemperaturaServicio.filtrar(ciudad, desde, hasta, cambiosTemperaturas));
 
             DefaultCategoryDataset dataset = new DefaultCategoryDataset();
-for (var item : diccionariosGrafica.entrySet()) {
-    var fecha = item.getKey();
-    var valor = item.getValue();
-    dataset.addValue(valor, "Temperatura", fecha.toString());
-}
+            for (var item : diccionariosGrafica.entrySet()) {
+                var fecha = item.getKey();
+                var valor = item.getValue();
+                dataset.addValue(valor, "Temperatura", fecha.toString());
+            }
 
-JFreeChart graficador = ChartFactory.createBarChart(
-        "Temperatura de " + ciudad + " vs Fecha",
-        "Fecha",
-        "Temperatura (°C)",
-        dataset,
-        PlotOrientation.VERTICAL,
-        false, true, false
-);
+            JFreeChart graficador = ChartFactory.createBarChart("Temperatura de " + ciudad + " vs Fecha", "Fecha",
+                    "Temperatura (°C)", dataset, PlotOrientation.VERTICAL, false, true, false);
 
             ChartPanel pnlGraficador = new ChartPanel(graficador);
             pnlGraficador.setPreferredSize(new Dimension(600, 400));
@@ -196,4 +202,75 @@ JFreeChart graficador = ChartFactory.createBarChart(
 
         }
     }
+
+    private void btnCalcularTempCiudadClick() {
+    if (cmbCiudad.getItemCount() > 0) {
+        LocalDate desde = dccDesde.getSelectedDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+        LocalDate hasta = dccHasta.getSelectedDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
+
+        StringBuilder resultadosPorCiudad = new StringBuilder();
+
+        double globalMax = Double.NEGATIVE_INFINITY;
+        String ciudadGlobalMax = null;
+        double globalMin = Double.POSITIVE_INFINITY;
+        String ciudadGlobalMin = null;
+        boolean hayDatosGlobales = false;
+
+        for (int i = 0; i < cmbCiudad.getItemCount(); i++) {
+            String ciudad = String.valueOf(cmbCiudad.getItemAt(i));
+
+            java.util.List<CambioTemperatura> datosFiltrados =
+                    CambioTemperaturaServicio.filtrar(ciudad, desde, hasta, cambiosTemperaturas);
+
+            java.util.List<Double> cambios = new java.util.ArrayList<>();
+            for (CambioTemperatura ct : datosFiltrados) {
+                cambios.add(ct.getCambio());
+            }
+
+            if (cambios.isEmpty()) {
+                resultadosPorCiudad.append(String.format("Ciudad: %s -> sin datos en el rango seleccionado%n", ciudad));
+            } else {
+                double maxLocal = CambioTemperaturaServicio.getMaximo(cambios);
+                double minLocal = CambioTemperaturaServicio.getMinimo(cambios);
+
+                resultadosPorCiudad.append(String.format("Ciudad: %s  Máx: %.2f  Mín: %.2f%n", ciudad, maxLocal, minLocal));
+
+                hayDatosGlobales = true;
+                if (maxLocal > globalMax) {
+                    globalMax = maxLocal;
+                    ciudadGlobalMax = ciudad;
+                }
+                if (minLocal < globalMin) {
+                    globalMin = minLocal;
+                    ciudadGlobalMin = ciudad;
+                }
+            }
+        }
+
+        if (!hayDatosGlobales) {
+            JOptionPane.showMessageDialog(this, "No hay datos para ninguna ciudad en el rango seleccionado.",
+                    "Máximo / Mínimo", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            String mensaje = new StringBuilder()
+                    .append("Resultados por ciudad:\n")
+                    .append(resultadosPorCiudad.toString())
+                    .append("\nMáxima Temperatura: ")
+                    .append(String.format("%.2f", globalMax))
+                    .append(ciudadGlobalMax != null ? "  (Ciudad: " + ciudadGlobalMax + ")" : "")
+                    .append("\nMínima Temperatura: ")
+                    .append(String.format("%.2f", globalMin))
+                    .append(ciudadGlobalMin != null ? "  (Ciudad: " + ciudadGlobalMin + ")" : "")
+                    .toString();
+
+            JOptionPane.showMessageDialog(this, mensaje, "Máximo / Mínimo",
+                    JOptionPane.INFORMATION_MESSAGE);
+        }
+
+        tpCambiosTemperatura.setSelectedIndex(2);
+    } else {
+        JOptionPane.showMessageDialog(this, "No hay ciudades en el combo.", "Atención",
+                JOptionPane.WARNING_MESSAGE);
+    }
+}
+
 }

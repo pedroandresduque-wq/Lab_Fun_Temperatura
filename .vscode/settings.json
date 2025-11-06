@@ -3,9 +3,6 @@
         "src"
     ],
     "java.project.outputPath": "bin",
-    "java.project.referencedLibraries": [
-        "c:\\Users\\PC\\OneDrive\\Escritorio\\UDEA_TP_CambiosMonedas_G3-main\\lib\\jcommon-1.0.24.jar",
-        "c:\\Users\\PC\\OneDrive\\Escritorio\\UDEA_TP_CambiosMonedas_G3-main\\lib\\DateChooser.jar",
-        "c:\\Users\\PC\\OneDrive\\Escritorio\\UDEA_TP_CambiosMonedas_G3-main\\lib\\jfreechart-1.5.4.jar"
-    ]
+    "java.project.referencedLibraries": ["lib/**/*.jar"],
+    "java.format.settings.url": ".vscode/java-formatter.xml"
 }
