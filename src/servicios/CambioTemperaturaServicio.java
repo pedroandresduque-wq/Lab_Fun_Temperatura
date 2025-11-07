@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -26,10 +25,10 @@ public class CambioTemperaturaServicio {
                             textos[0].trim(),
                             LocalDate.parse(textos[1].trim(), formatoFecha),
                             Double.parseDouble(textos[2].trim().replace(",", "."))))
-                    .collect(Collectors.toList());
+                    .collect(Collectors.toUnmodifiableList());
 
         } catch (Exception ex) {
-            return Collections.emptyList();
+            return List.of();
         }
     }
 
@@ -38,7 +37,7 @@ public class CambioTemperaturaServicio {
                 .map(CambioTemperatura::getCiudad)
                 .distinct()
                 .sorted()
-                .collect(Collectors.toList());
+                .collect(Collectors.toUnmodifiableList());
     }
 
     public static List<CambioTemperatura> filtrar(String ciudad, LocalDate desde, LocalDate hasta,
@@ -47,7 +46,7 @@ public class CambioTemperaturaServicio {
                 .filter(item -> item.getCiudad().equals(ciudad)
                         && !item.getFecha().isBefore(desde)
                         && !item.getFecha().isAfter(hasta))
-                .collect(Collectors.toList());
+                .collect(Collectors.toUnmodifiableList());
     }
 
     public static Map<LocalDate, Double> extraer(List<CambioTemperatura> datos) {
@@ -103,17 +102,16 @@ public class CambioTemperaturaServicio {
         var datosFiltrados = filtrar(ciudad, desde, hasta, datos);
         var cambios = datosFiltrados.stream()
                 .map(CambioTemperatura::getCambio)
-                .collect(Collectors.toList());
+                .collect(Collectors.toUnmodifiableList());
 
-        Map<String, Double> estadisticas = new LinkedHashMap<>();
-        estadisticas.put("Promedio", getPromedio(cambios));
-        estadisticas.put("Desviación Estándar", getDesviacionEstandar(cambios));
-        estadisticas.put("Máximo", getMaximo(cambios));
-        estadisticas.put("Mínimo", getMinimo(cambios));
-        estadisticas.put("Moda", getModa(cambios));
-        estadisticas.put("Mediana", getMediana(cambios));
-
-        return estadisticas;
+        return Map.ofEntries(
+            Map.entry("Promedio", getPromedio(cambios)),
+            Map.entry("Desviación Estándar", getDesviacionEstandar(cambios)),
+            Map.entry("Máximo", getMaximo(cambios)),
+            Map.entry("Mínimo", getMinimo(cambios)),
+            Map.entry("Moda", getModa(cambios)),
+            Map.entry("Mediana", getMediana(cambios))
+        );
     }
 
 }

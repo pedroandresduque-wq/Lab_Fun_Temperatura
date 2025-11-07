@@ -42,7 +42,6 @@ public class FrmCambiosTemperaturas extends JFrame {
     private JPanel pnlGrafica;
     private JPanel pnlEstadisticas;
 
-    // Nuevo: panel y área de texto para mostrar resultados de temperaturas
     private JPanel pnlTemperatura;
     private JTextArea txtTemperaturas;
 
@@ -87,7 +86,6 @@ public class FrmCambiosTemperaturas extends JFrame {
         });
         tb.add(btnCalcularTempCiudad);
 
-        // Contenedor con BoxLayout (vertical)
         JPanel pnlCambios = new JPanel();
         pnlCambios.setLayout(new BoxLayout(pnlCambios, BoxLayout.Y_AXIS));
 
@@ -121,7 +119,6 @@ public class FrmCambiosTemperaturas extends JFrame {
         tpCambiosTemperatura.addTab("Gráfica", spGrafica);
         tpCambiosTemperatura.addTab("Estadísticas", pnlEstadisticas);
 
-        // Inicializar panel de Temperatura y área de texto (nuevo)
         pnlTemperatura = new JPanel(new BorderLayout());
         txtTemperaturas = new JTextArea();
         txtTemperaturas.setEditable(false);
@@ -132,7 +129,6 @@ public class FrmCambiosTemperaturas extends JFrame {
 
         tpCambiosTemperatura.addTab("Temperatura", pnlTemperatura);
 
-        // Agregar componentes
         pnlCambios.add(pnlDatosProceso);
         pnlCambios.add(tpCambiosTemperatura);
 
@@ -184,8 +180,6 @@ public class FrmCambiosTemperaturas extends JFrame {
             pnlGrafica.setLayout(new BorderLayout());
             pnlGrafica.add(pnlGraficador, BorderLayout.CENTER);
             pnlGrafica.revalidate();
-
-            // Cambiar a la pestaña de Grafica
             tpCambiosTemperatura.setSelectedIndex(0);
         }
     }
@@ -212,7 +206,6 @@ public class FrmCambiosTemperaturas extends JFrame {
                 fila++;
             }
 
-            // Cambiar a la pestaña de estadísticas
             tpCambiosTemperatura.setSelectedIndex(1);
 
         }
@@ -228,7 +221,6 @@ public class FrmCambiosTemperaturas extends JFrame {
     LocalDate desde = dccDesde.getSelectedDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     LocalDate hasta = dccHasta.getSelectedDate().toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
-    // Llamada al nuevo servicio
     var resultados = CalculoTemperaturaServicio.calcularTemperaturas(
             cambiosTemperaturas, ciudades, desde, hasta);
 
@@ -255,7 +247,6 @@ public class FrmCambiosTemperaturas extends JFrame {
     pnlTemperatura.revalidate();
     pnlTemperatura.repaint();
 
-    // Cambiar a la pestaña de temperatura
     tpCambiosTemperatura.setSelectedIndex(2);
 }
 }

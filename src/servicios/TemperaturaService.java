@@ -102,7 +102,7 @@ public class TemperaturaService {
     }
 
     public static List<CambioTemperatura> cargarDatos(String rutaArchivo) {
-        return CambioTemperaturaServicio.getDatos(rutaArchivo);
+        return List.copyOf(CambioTemperaturaServicio.getDatos(rutaArchivo));
     }
 
     public static List<String> obtenerCiudades(List<CambioTemperatura> datos) {
@@ -110,6 +110,6 @@ public class TemperaturaService {
             .map(CambioTemperatura::getCiudad)
             .distinct()
             .sorted()
-            .collect(Collectors.toList());
+            .collect(Collectors.toUnmodifiableList());
     }
 }

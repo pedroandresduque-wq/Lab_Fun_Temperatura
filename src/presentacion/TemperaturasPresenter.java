@@ -10,10 +10,6 @@ import servicios.TemperaturaService.EstadisticasTemperatura;
 import servicios.TemperaturaService.TemperaturasExtremas;
 import entidades.CambioTemperatura;
 
-/**
- * Presentador que maneja la lógica de presentación para la vista de temperaturas.
- * Implementa el patrón MVP (Model-View-Presenter).
- */
 public class TemperaturasPresenter {
     private final VistaTemperaturas vista;
     private List<CambioTemperatura> datos;
@@ -32,8 +28,8 @@ public class TemperaturasPresenter {
     }
 
     public void cargarDatos(String rutaArchivo) {
-        datos = TemperaturaService.cargarDatos(rutaArchivo);
-        ciudades = TemperaturaService.obtenerCiudades(datos);
+        this.datos = TemperaturaService.cargarDatos(rutaArchivo);
+        this.ciudades = TemperaturaService.obtenerCiudades(datos);
         vista.actualizarCiudades(ciudades);
     }
 
