@@ -159,7 +159,6 @@ public class FrmCambiosTemperaturas extends JFrame implements TemperaturasPresen
         }
     }
 
-    // Implementación de la interfaz VistaTemperaturas
     @Override
     public void mostrarDatosGrafica(Map<LocalDate, Double> datos, String titulo) {
         DefaultCategoryDataset dataset = new DefaultCategoryDataset();
