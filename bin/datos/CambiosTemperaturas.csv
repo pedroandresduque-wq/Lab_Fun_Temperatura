@@ -29,3 +29,283 @@ Cali,07/01/2024,24.5
 Cali,08/01/2024,24.6
 Cali,09/01/2024,25.9
 Cali,10/01/2024,22.9
+Santa Marta,01/01/2024,13.1
+Santa Marta,02/01/2024,18.3
+Santa Marta,03/01/2024,18
+Santa Marta,04/01/2024,15.6
+Santa Marta,05/01/2024,15.3
+Santa Marta,06/01/2024,13.5
+Santa Marta,07/01/2024,11.3
+Santa Marta,08/01/2024,12.2
+Santa Marta,09/01/2024,12.5
+Santa Marta,10/01/2024,12.5
+Sincelejo ,01/01/2024,16.5
+Sincelejo ,02/01/2024,20.8
+Sincelejo ,03/01/2024,14.2
+Sincelejo ,04/01/2024,11.6
+Sincelejo ,05/01/2024,11.3
+Sincelejo ,06/01/2024,10.9
+Sincelejo ,07/01/2024,18.5
+Sincelejo ,08/01/2024,11
+Sincelejo ,09/01/2024,17
+Sincelejo ,10/01/2024,13.8
+Monteria,01/01/2024,13.1
+Monteria,02/01/2024,10.7
+Monteria,03/01/2024,13.5
+Monteria,04/01/2024,15.8
+Monteria,05/01/2024,20.8
+Monteria,06/01/2024,13.6
+Monteria,07/01/2024,14.1
+Monteria,08/01/2024,17.8
+Monteria,09/01/2024,11.2
+Monteria,10/01/2024,15.8
+Cartagena,01/01/2024,14.6
+Cartagena,02/01/2024,13.4
+Cartagena,03/01/2024,20.9
+Cartagena,04/01/2024,14.8
+Cartagena,05/01/2024,10.6
+Cartagena,06/01/2024,10.3
+Cartagena,07/01/2024,19.5
+Cartagena,08/01/2024,13
+Cartagena,09/01/2024,19.8
+Cartagena,10/01/2024,11.7
+Riohacha,01/01/2024,13.7
+Riohacha,02/01/2024,16.1
+Riohacha,03/01/2024,15.5
+Riohacha,04/01/2024,14.4
+Riohacha,05/01/2024,12.7
+Riohacha,06/01/2024,17.2
+Riohacha,07/01/2024,14
+Riohacha,08/01/2024,16.7
+Riohacha,09/01/2024,17.7
+Riohacha,10/01/2024,18.1
+Valledupar,01/01/2024,16.6
+Valledupar,02/01/2024,20.2
+Valledupar,03/01/2024,18.5
+Valledupar,04/01/2024,12.3
+Valledupar,05/01/2024,19.5
+Valledupar,06/01/2024,14.1
+Valledupar,07/01/2024,10.4
+Valledupar,08/01/2024,18.1
+Valledupar,09/01/2024,17.2
+Valledupar,10/01/2024,13
+Barranquilla,01/01/2024,16.2
+Barranquilla,02/01/2024,16.5
+Barranquilla,03/01/2024,15.8
+Barranquilla,04/01/2024,19.7
+Barranquilla,05/01/2024,13.9
+Barranquilla,06/01/2024,14.2
+Barranquilla,07/01/2024,12.2
+Barranquilla,08/01/2024,19.4
+Barranquilla,09/01/2024,13.3
+Barranquilla,10/01/2024,19.7
+Cúcuta,01/01/2024,14.3
+Cúcuta,02/01/2024,19.5
+Cúcuta,03/01/2024,11.5
+Cúcuta,04/01/2024,14.5
+Cúcuta,05/01/2024,10.2
+Cúcuta,06/01/2024,16.4
+Cúcuta,07/01/2024,19
+Cúcuta,08/01/2024,16.5
+Cúcuta,09/01/2024,14.4
+Cúcuta,10/01/2024,12.8
+Bucaramanga,01/01/2024,14.2
+Bucaramanga,02/01/2024,14.8
+Bucaramanga,03/01/2024,17.9
+Bucaramanga,04/01/2024,19.9
+Bucaramanga,05/01/2024,19.2
+Bucaramanga,06/01/2024,16.1
+Bucaramanga,07/01/2024,16
+Bucaramanga,08/01/2024,20.4
+Bucaramanga,09/01/2024,16.1
+Bucaramanga,10/01/2024,10.9
+Quibdó,01/01/2024,18.3
+Quibdó,02/01/2024,19.2
+Quibdó,03/01/2024,15.1
+Quibdó,04/01/2024,10.9
+Quibdó,05/01/2024,14.1
+Quibdó,06/01/2024,12.1
+Quibdó,07/01/2024,16.3
+Quibdó,08/01/2024,14.8
+Quibdó,09/01/2024,20.6
+Quibdó,10/01/2024,20
+Arauca,01/01/2024,19.7
+Arauca,02/01/2024,14.6
+Arauca,03/01/2024,14.4
+Arauca,04/01/2024,20.2
+Arauca,05/01/2024,13.3
+Arauca,06/01/2024,14.9
+Arauca,07/01/2024,13
+Arauca,08/01/2024,19.2
+Arauca,09/01/2024,20.3
+Arauca,10/01/2024,14.9
+Puerto Carreño,01/01/2024,11.6
+Puerto Carreño,02/01/2024,18.4
+Puerto Carreño,03/01/2024,17.7
+Puerto Carreño,04/01/2024,11
+Puerto Carreño,05/01/2024,14.2
+Puerto Carreño,06/01/2024,19.9
+Puerto Carreño,07/01/2024,13.4
+Puerto Carreño,08/01/2024,13.6
+Puerto Carreño,09/01/2024,14.9
+Puerto Carreño,10/01/2024,11.7
+Tunja,01/01/2024,15.3
+Tunja,02/01/2024,18.9
+Tunja,03/01/2024,10.9
+Tunja,04/01/2024,15.1
+Tunja,05/01/2024,10.7
+Tunja,06/01/2024,11.6
+Tunja,07/01/2024,10.7
+Tunja,08/01/2024,19.8
+Tunja,09/01/2024,13
+Tunja,10/01/2024,15.4
+Yopal,01/01/2024,12.9
+Yopal,02/01/2024,11.4
+Yopal,03/01/2024,15.4
+Yopal,04/01/2024,10.8
+Yopal,05/01/2024,13.6
+Yopal,06/01/2024,11.6
+Yopal,07/01/2024,13.4
+Yopal,08/01/2024,20.6
+Yopal,09/01/2024,17.5
+Yopal,10/01/2024,10.9
+Manizales,01/01/2024,15.4
+Manizales,02/01/2024,20.9
+Manizales,03/01/2024,17.5
+Manizales,04/01/2024,18.9
+Manizales,05/01/2024,18.2
+Manizales,06/01/2024,18
+Manizales,07/01/2024,16.8
+Manizales,08/01/2024,16.7
+Manizales,09/01/2024,11.3
+Manizales,10/01/2024,12.7
+Pereira,01/01/2024,10.2
+Pereira,02/01/2024,13.1
+Pereira,03/01/2024,11.9
+Pereira,04/01/2024,10.2
+Pereira,05/01/2024,12.9
+Pereira,06/01/2024,14.9
+Pereira,07/01/2024,13.7
+Pereira,08/01/2024,11.1
+Pereira,09/01/2024,17.9
+Pereira,10/01/2024,18.8
+Armenia,01/01/2024,16
+Armenia,02/01/2024,16.4
+Armenia,03/01/2024,12.2
+Armenia,04/01/2024,18.9
+Armenia,05/01/2024,11.8
+Armenia,06/01/2024,16.5
+Armenia,07/01/2024,19.2
+Armenia,08/01/2024,17.5
+Armenia,09/01/2024,12.5
+Armenia,10/01/2024,16.7
+Ibagué,01/01/2024,15.9
+Ibagué,02/01/2024,12
+Ibagué,03/01/2024,11.8
+Ibagué,04/01/2024,17.9
+Ibagué,05/01/2024,13.1
+Ibagué,06/01/2024,16.8
+Ibagué,07/01/2024,15
+Ibagué,08/01/2024,16.3
+Ibagué,09/01/2024,13.7
+Ibagué,10/01/2024,17.5
+Villavicencio,01/01/2024,16.7
+Villavicencio,02/01/2024,10.4
+Villavicencio,03/01/2024,19.6
+Villavicencio,04/01/2024,17.9
+Villavicencio,05/01/2024,17
+Villavicencio,06/01/2024,15.7
+Villavicencio,07/01/2024,12.6
+Villavicencio,08/01/2024,16.6
+Villavicencio,09/01/2024,16.9
+Villavicencio,10/01/2024,15.2
+Neiva,01/01/2024,15.2
+Neiva,02/01/2024,16.6
+Neiva,03/01/2024,19
+Neiva,04/01/2024,13.3
+Neiva,05/01/2024,13.8
+Neiva,06/01/2024,11
+Neiva,07/01/2024,11
+Neiva,08/01/2024,11.5
+Neiva,09/01/2024,17.9
+Neiva,10/01/2024,14.3
+Popayán,01/01/2024,10.3
+Popayán,02/01/2024,13.5
+Popayán,03/01/2024,18
+Popayán,04/01/2024,11.9
+Popayán,05/01/2024,16.2
+Popayán,06/01/2024,12.5
+Popayán,07/01/2024,14
+Popayán,08/01/2024,15.2
+Popayán,09/01/2024,19.7
+Popayán,10/01/2024,11.9
+San José del Guaviare,01/01/2024,17.4
+San José del Guaviare,02/01/2024,12
+San José del Guaviare,03/01/2024,10.1
+San José del Guaviare,04/01/2024,18.5
+San José del Guaviare,05/01/2024,13.7
+San José del Guaviare,06/01/2024,14.9
+San José del Guaviare,07/01/2024,18.5
+San José del Guaviare,08/01/2024,14
+San José del Guaviare,09/01/2024,20.6
+San José del Guaviare,10/01/2024,20.8
+San Felipe,01/01/2024,17.6
+San Felipe,02/01/2024,17.4
+San Felipe,03/01/2024,17.6
+San Felipe,04/01/2024,16.3
+San Felipe,05/01/2024,14.6
+San Felipe,06/01/2024,14.3
+San Felipe,07/01/2024,20.5
+San Felipe,08/01/2024,10.4
+San Felipe,09/01/2024,15.2
+San Felipe,10/01/2024,20.9
+Pasto,01/01/2024,16.5
+Pasto,02/01/2024,12.8
+Pasto,03/01/2024,10.1
+Pasto,04/01/2024,20.5
+Pasto,05/01/2024,19.8
+Pasto,06/01/2024,11.7
+Pasto,07/01/2024,13.3
+Pasto,08/01/2024,13.5
+Pasto,09/01/2024,16.5
+Pasto,10/01/2024,16.4
+Mocoa,01/01/2024,15.6
+Mocoa,02/01/2024,18.3
+Mocoa,03/01/2024,18.4
+Mocoa,04/01/2024,20.2
+Mocoa,05/01/2024,20.6
+Mocoa,06/01/2024,13.7
+Mocoa,07/01/2024,16.1
+Mocoa,08/01/2024,12.5
+Mocoa,09/01/2024,20.9
+Mocoa,10/01/2024,10.4
+Mitú,01/01/2024,14.5
+Mitú,02/01/2024,11.4
+Mitú,03/01/2024,16.4
+Mitú,04/01/2024,20.3
+Mitú,05/01/2024,11.3
+Mitú,06/01/2024,11.4
+Mitú,07/01/2024,12.3
+Mitú,08/01/2024,11
+Mitú,09/01/2024,13.1
+Mitú,10/01/2024,16.7
+Florencia ,01/01/2024,18.6
+Florencia ,02/01/2024,10.7
+Florencia ,03/01/2024,19.3
+Florencia ,04/01/2024,20.4
+Florencia ,05/01/2024,11.7
+Florencia ,06/01/2024,16.9
+Florencia ,07/01/2024,18
+Florencia ,08/01/2024,20.7
+Florencia ,09/01/2024,17.1
+Florencia ,10/01/2024,20.4
+Leticia,01/01/2024,11.8
+Leticia,02/01/2024,10.8
+Leticia,03/01/2024,20.5
+Leticia,04/01/2024,16.8
+Leticia,05/01/2024,19.7
+Leticia,06/01/2024,13.9
+Leticia,07/01/2024,16.5
+Leticia,08/01/2024,19.4
+Leticia,09/01/2024,20.1
+Leticia,10/01/2024,20.7
